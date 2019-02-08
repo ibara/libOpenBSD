@@ -17,3 +17,7 @@ $ sudo make install
 * strlcat(3)
 * strlcpy(3)
 * strtonum(3)
+
+## Additional files
+There is a `c-compiler-tutorial.md` and a `make-tutorial.md` for students
+who need to brush up on their C compiler and `make` utility knowledge.
