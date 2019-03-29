@@ -10,7 +10,7 @@ This short tutorial will describe how to write a basic `Makefile` which will
 work with BSD make and GNU make, the two most commonly used `make` programs.
 
 ## Writing Makefiles
-If you have a file in a directory named `Makefile`, then the `make` utility will
+If you have a file named `Makefile`, then the `make` utility will
 automatically discover and use it to build your programs. You must have such a
 file or else `make` won't work!
 
