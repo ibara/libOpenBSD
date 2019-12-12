@@ -20,7 +20,7 @@ The name `a.out` is for historical reasons.
 `file`. So you can control the output file name with `-o`.
 * `-O0` disables optimizations. Always use it for class.
 * `-O2` enables all recommended optimizations. While we won't use `-O2` in
-class, if you don't know what optimization level to use, use `-O2`.
+class, `-O2` is an ideal default unless you have special requirements.
 * `-pipe` will make your compiles a little bit faster. Always use it.
 * `-g` turns on debug symbols. Always use it for class since we will use the
 debugger.
