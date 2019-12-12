@@ -43,3 +43,7 @@ And that's really it. You can get pretty far with just knowing those compiler
 flags. You may in your reading be tempted to use the `-march=` and `-mtune=`
 flags, particularly in their `-march=native` and `-mtune=native` variants. Don't
 use those. Ever. Unless you really know what you are doing.
+
+Don't forget to read the
+[make tutorial](https://github.com/ibara/libOpenBSD/blob/master/make-tutorial.md)
+too.
