@@ -1,8 +1,14 @@
 # C compiler
-You may use `clang` or `gcc` for this class. I will occasionally use another C
-compiler named `pcc` to generate assembly for us to look at as a class. You are
-welcome to use `pcc` as well, but it is a package you will have to install.
-`pcc` is avaiable as a package on all BSDs and Linux but not on macOS.
+You will predominantly use `clang` for this class. On our server, it is aliased
+to `cc`. There is also `gcc` (for historical reasons, named `egcc`), `pcc`,
+`tcc`, `cparser`, and `ccomp` installed on the server as well. You are welcome
+to use them but unless specifically stated otherwise (notably, the coding
+project), you should stick with `cc`.
+
+I will occasionally use `pcc` to generate assembly for us to look at as a class.
+This is because `pcc` generates much simpler assembly than `cc`, and also
+doesn't use all the fancy security features built into `cc`. That makes it
+easier for us to read the assembly.
 
 I invite you to read through the
 [clang](https://clang.llvm.org/docs/CommandGuide/clang.html) and
@@ -21,7 +27,8 @@ The name `a.out` is for historical reasons.
 * `-O0` disables optimizations. Always use it for class.
 * `-O2` enables all recommended optimizations. While we won't use `-O2` in
 class, `-O2` is an ideal default unless you have special requirements.
-* `-pipe` will make your compiles a little bit faster. Always use it.
+* `-pipe` will make your compiles a little bit faster on `gcc` and is a noop on
+`clang`. Always use it.
 * `-g` turns on debug symbols. Always use it for class since we will use the
 debugger.
 * `cc -S file.c` will compile the file `file.c`, write the assembly to `file.s`,
