@@ -25,7 +25,7 @@ My `Makefile` would look like this:
 # Makefile for the three program.
 
 CC =		cc
-CFLAGS =	-O0 -pipe -g -W -Wall
+CFLAGS =	-O0 -pipe -g -Wall
 
 PROG =	three
 OBJS =	one.o two.o
@@ -58,9 +58,9 @@ day. It is less of a performance improvement now but has come to be considered
 good style and practice. For this class, however, you should use `-O0 -pipe -g`
 unless I tell you otherwise. The `-O0` flag disables all optimizations and the
 `-g` flag puts debugging information into your binary, which will be helpful
-when we look at programs in a debugger. `-W` and `-Wall`, as I have in the
-example, are used to enable warnings from the compiler. You don't need them for
-class, but they are useful in the real world.
+when we look at programs in a debugger. `-Wall`, as I have in the example, is
+used to enable warnings from the compiler. You don't need `-Wall` for class,
+but it is useful in the real world.
 
 `PROG` is a variable that represents the name of the binary you wish to create.
 
@@ -73,8 +73,9 @@ will take when invoking it. This `Makefile` has two targets: `all` and `clean`.
 For example, to make `make` run the clean target, you would invoke the utility
 as `make clean`.
 
-`all` is a special target. If `make` sees an `all` target, it will default to
-using that target if you simply issue the command `make`. Targets must have a
+`all` is a special target. Since it is listed first, it will be the target run
+by `make` when no arguments are given (in other words, running `make` by itself
+will build the program, exactly what we want it to do). Targets must have a
 colon `:` character immediately after them. Anything immediately after the `:`
 is considered a _dependency_ of that target, and will be executed first.
 In this case, the phrase `all: ${OBJS}` means "in order for the all target to
